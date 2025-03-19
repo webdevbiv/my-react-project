@@ -1,4 +1,5 @@
 import { Alert } from "./Alert";
+import { AlertCLSX } from "./AlertCLSX";
 import { BooksList } from "./BooksList";
 import { Card } from "./Card";
 import Product from "./Product";
@@ -60,6 +61,9 @@ export default function App() {
         <Alert variant="warning">
           Please update your profile contact information
         </Alert>
+      </div>
+      <div>
+        <AlertCLSX variant="info">This is an alert</AlertCLSX>
       </div>
     </div>
   );
