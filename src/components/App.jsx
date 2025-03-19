@@ -1,14 +1,20 @@
 // src/components/App.jsx
 
 import { BooksList } from "./BooksList";
+import { Card } from "./Card";
 import Product from "./Product";
 
 export default function App() {
   const favBooks = [
-    { id: "id-1", name: "JS for beginners" },
-    { id: "id-2", name: "React basics" },
-    { id: "id-3", name: "React Router overview" },
+    // { id: "id-1", name: "JS for beginners" },
+    // { id: "id-2", name: "React basics" },
+    // { id: "id-3", name: "React Router overview" },
   ];
+
+  const cardChildren = <div>Some children</div>;
+
+  // console.log(favBooks);
+
   return (
     <>
       <div>
@@ -26,7 +32,14 @@ export default function App() {
         <Product name="Tacos With Lime" price={10.99} />
       </div>
       <div>
-        <BooksList books={favBooks} />
+        {favBooks.length > 0 ? (
+          <BooksList books={favBooks} />
+        ) : (
+          <p>You have no favorite books</p>
+        )}
+      </div>
+      <div>
+        <Card>{cardChildren}</Card>
       </div>
     </>
   );

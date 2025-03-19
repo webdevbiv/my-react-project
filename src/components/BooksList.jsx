@@ -1,4 +1,4 @@
-export const BookList = ({ books }) => {
+export const BooksList = ({ books }) => {
   return (
     <ul>
       {books.map((book) => {
