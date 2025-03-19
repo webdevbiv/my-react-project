@@ -4,7 +4,7 @@
 // import "./App.css";
 
 // src/App.jsx
-import Product from "./components/Product.jsx";
+import Product from "./Product.jsx";
 
 export default function App() {
   return (
