@@ -1,20 +1,28 @@
+import { Alert } from "./Alert";
 import { BooksList } from "./BooksList";
 import { Card } from "./Card";
 import Product from "./Product";
 
 export default function App() {
+  const appStyles = {
+    display: "flex",
+    margin: "0 auto",
+    flexDirection: "column",
+    justifyContent: "center",
+  };
+
   const favBooks = [
-    // { id: "id-1", name: "JS for beginners" },
-    // { id: "id-2", name: "React basics" },
-    // { id: "id-3", name: "React Router overview" },
+    { id: "id-1", name: "JS for beginners" },
+    { id: "id-2", name: "React basics" },
+    { id: "id-3", name: "React Router overview" },
   ];
 
   const cardChildren = <div>Some children</div>;
 
-  // console.log(favBooks);
+  console.log(favBooks);
 
   return (
-    <>
+    <div style={appStyles}>
       <div>
         <h1>Best selling</h1>
         <Product
@@ -39,6 +47,20 @@ export default function App() {
       <div>
         <Card>{cardChildren}</Card>
       </div>
-    </>
+      <div>
+        <Alert variant="info">
+          Would you like to browse our recommended products?
+        </Alert>
+        <Alert variant="error">
+          There was an error during your last transaction
+        </Alert>
+        <Alert variant="success">
+          Payment received, thank you for your purchase
+        </Alert>
+        <Alert variant="warning">
+          Please update your profile contact information
+        </Alert>
+      </div>
+    </div>
   );
 }
