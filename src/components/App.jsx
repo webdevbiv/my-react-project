@@ -1,5 +1,3 @@
-// src/components/App.jsx
-
 import { BooksList } from "./BooksList";
 import { Card } from "./Card";
 import Product from "./Product";
